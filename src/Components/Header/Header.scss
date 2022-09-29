@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__img {
+    width: 100px;
+    height: 100px;
+  }
+}
+body {
+  background-image: url("https://i.ytimg.com/vi/I25T-t7HtuE/maxresdefault.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__input {
+    border: none;
+    width: 300px;
+    height: 30px;
+    border-radius: 100px;
+  }
+  &__sign-in {
+    cursor: pointer;
+    border: none;
+    background-color: #3498db;
+    border-radius: 20px;
+    width: 70px;
+    height: 40px;
+  }
+  &__sign-up {
+    cursor: pointer;
+    border: none;
+    background-color: #3498db;
+    border-radius: 20px;
+    width: 70px;
+    height: 40px;
+  }
+}
+.btn {
+  margin-right: 30px;
+}
+.form {
+  display: flex;
+  align-items: center;
+  &__glass {
+    width: 30px;
+    height: 30px;
+  }
+}
