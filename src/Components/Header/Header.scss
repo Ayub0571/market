@@ -1,53 +1,30 @@
 .header {
+  padding: 1.2em;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  &__img {
-    width: 100px;
-    height: 100px;
+  background-color: rgb(37, 139, 170);
+  width: 98.8vw;
+  height: 100vw;
+
+  &__logo {
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 50%;
   }
-}
-body {
-  background-image: url("https://i.ytimg.com/vi/I25T-t7HtuE/maxresdefault.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+  &__login {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+  }
+
+  &__btn {
+  }
 
   &__input {
-    border: none;
-    width: 300px;
-    height: 30px;
-    border-radius: 100px;
-  }
-  &__sign-in {
-    cursor: pointer;
-    border: none;
-    background-color: #3498db;
-    border-radius: 20px;
-    width: 70px;
-    height: 40px;
-  }
-  &__sign-up {
-    cursor: pointer;
-    border: none;
-    background-color: #3498db;
-    border-radius: 20px;
-    width: 70px;
-    height: 40px;
-  }
-}
-.btn {
-  margin-right: 30px;
-}
-.form {
-  display: flex;
-  align-items: center;
-  &__glass {
-    width: 30px;
+    width: 200px;
     height: 30px;
   }
 }

@@ -1,10 +1,13 @@
+import Ocean from "components/Ocean/Ocean.js";
+import React from "react";
 import "./App.css";
-import Header from "./Components/Header/Header.js";
+import Header from "./components/Header/Header.js";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Header />
+      <Ocean />
     </div>
   );
 }
