@@ -2,7 +2,13 @@
   padding: 1.2em;
   display: flex;
   justify-content: space-between;
-  background-image: url("https://darvideo.tv/wp-content/uploads/2022/02/TED-The-Black-Sea.gif");
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 254, 234, 1) 0%,
+    rgba(255, 254, 234, 1) 0%,
+    #b7e8eb 100%
+  );
+  overflow: hidden;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -82,4 +88,13 @@
   padding: 0 10px;
   border-radius: 100px;
   z-index: 2;
+}
+.title {
+  position: absolute;
+  margin-left: 33%;
+  font-size: 20px;
+  display: inline-block;
+  color: blue;
+  text-align: center;
+  margin-top: 20%;
 }
