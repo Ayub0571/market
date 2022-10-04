@@ -17,7 +17,7 @@ const Header = () => {
               Subscribe
             </button>
           </div>
-          <div className="header__sign-in">Sign in</div>
+          <div className="header__sign-in">Go to hell</div>
           <div className="header__sign-up">Sign up</div>
         </div>
       
