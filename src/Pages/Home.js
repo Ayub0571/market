@@ -1,7 +1,9 @@
 import React from "react";
 import "./Header.scss";
+import Ocean from "../components/Ocean/Ocean.js";
+import "./Routs.css";
 
-const Header = () => {
+const Home = () => {
   return (
     <div className="wrapper">
       <div className="header">
@@ -21,8 +23,9 @@ const Header = () => {
           <div className="header__sign-up">Sign up</div>
         </div>
       </div>
+      <Ocean />
     </div>
   );
 };
 
-export default Header;
+export { Home };

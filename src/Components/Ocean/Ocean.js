@@ -5,12 +5,9 @@ const Ocean = () => {
   return (
     <div className="">
       <div className="bgi">
-        <div className="snow layer1 a"></div>
-        <div className="snow layer1"></div>
-        <div className="snow layer2 a"></div>
-        <div className="snow layer2"></div>
-        <div className="snow layer3 a"></div>
-        <div className="snow layer3"></div>
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
       </div>
     </div>
   );
