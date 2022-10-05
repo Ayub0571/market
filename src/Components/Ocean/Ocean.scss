@@ -1,18 +1,19 @@
 .bgi {
   background: #003f7c;
-
   width: 100vw;
   height: 100vw;
+  margin-left: -1%;
+  
 }
 
 .ocean {
-  height: 80px; /* change the height of the waves here */
+  height: 100px; /* change the height of the waves here */
   width: 100%;
   position: absolute;
   left: 0;
   right: 0;
   overflow-x: hidden;
-  bottom: -32%;
+  bottom: -45%;
 }
 
 .wave {
@@ -22,7 +23,7 @@
   height: 100%;
   animation: wave 8s -3s linear infinite;
   transform: translate3d(0, 0, 0);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .wave:nth-of-type(2) {

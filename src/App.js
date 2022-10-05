@@ -1,15 +1,32 @@
-import Ocean from "components/Ocean/Ocean.js";
 import React from "react";
-import "./App.css";
-import Header from "./components/Header/Header.js";
+import {Routes, Route } from 'react-router-dom';
+import {Blog} from './Pages/Blog';
+import About from './Pages/About';
+import {Not} from './Pages/Not';
+import {Layout} from './Routs/Layout';
+import {Home} from './Pages/Home';
 
 function App() {
   return (
     <div>
-      <Header />
-      <Ocean />
+     
+      <Routes>
+            <Route path='/' element={<Layout/>}>
+                <Route path='/' element={<Home/>}/>
+                <Route path='about' element={<About/>}/>
+                <Route path='posts' element={<Blog/>}/>
+                <Route path='*' element={<Not/>}/>
+            </Route>
+          </Routes>
+      
+      
     </div>
   );
 }
 
 export default App;
+
+
+
+
+

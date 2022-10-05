@@ -1,9 +1,12 @@
 import React from "react";
 import "./Header.scss";
+import Ocean from "../components/Ocean/Ocean.js";
+import './Routs.css'
 
-const Header = () => {
+const Home = () => {
   return (
     <div className="wrapper">
+      
       <div className="header">
         <div className="header__logo"></div>
         <div className="header__login">
@@ -17,7 +20,7 @@ const Header = () => {
               Subscribe
             </button>
           </div>
-          <div className="header__sign-in">Go to hell</div>
+          <div className="header__sign-in">Sign in</div>
           <div className="header__sign-up">Sign up</div>
         </div>
       
@@ -25,9 +28,13 @@ const Header = () => {
           <h1 className="title__item">Добро пожаловать! </h1>
           <h3 className="title__item-2">Сделано с любовью💘</h3>
         </div>
+        
       </div>
+      <Ocean />
+
     </div>
+    
   );
 };
 
-export default Header;
+export  {Home};

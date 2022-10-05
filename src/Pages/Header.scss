@@ -12,9 +12,10 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 99.5%;
   height: 60vw;
   color: #fff;
+  margin-left: -1%;
 
   &__login {
     display: flex;
@@ -29,7 +30,8 @@
  
   &__sign-in,
   &__sign-up {
-    height: 40px;
+    height: 25px;
+    width: 70px;
     background-color: rgb(37, 99, 235);
     font-weight: bold;
     color: white;
