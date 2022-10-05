@@ -20,11 +20,6 @@ const Header = () => {
           <div className="header__sign-in">Sign in</div>
           <div className="header__sign-up">Sign up</div>
         </div>
-      
-        <div className="title">
-          <h1 className="title__item">Добро пожаловать! </h1>
-          <h3 className="title__item-2">Сделано с любовью💘</h3>
-        </div>
       </div>
     </div>
   );

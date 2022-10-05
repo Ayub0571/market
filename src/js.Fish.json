@@ -1,0 +1,45 @@
+[
+  {
+    "id": 1,
+    "name": "Золотые рыбки",
+    "image": "https://w7.pngwing.com/pngs/316/573/png-transparent-gold-fish-pet-shoal-of-fish-aquatic.png"
+  },
+  {
+    "id": 2,
+    "name": "Кораллы",
+    "image": "https://avatanplus.com/files/resources/original/5b5c087686617164df810f16.png"
+  },
+
+  {
+    "id": 3,
+    "name": "Тюлень",
+    "image": "https://pngimg.com/uploads/harbor_seal/harbor_seal_PNG2.png"
+  },
+  {
+    "id": 4,
+    "name": "Белый Медведь",
+    "image": "https://www.pngmart.com/files/4/Polar-Bear-PNG-HD.png"
+  },
+
+  {
+    "id": 5,
+    "name": "Белый Медведь",
+    "image": "https://www.pngmart.com/files/4/Polar-Bear-PNG-HD.png"
+  },
+  {
+    "id": 6,
+    "name": "Черепаха",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Emperor_penguin.svg/690px-Emperor_penguin.svg.png"
+  },
+
+  {
+    "id": 7,
+    "name": "KILLER WHALE",
+    "image": "https://www.pngall.com/wp-content/uploads/2016/06/Killer-Whale-PNG.png"
+  },
+  {
+    "id": 8,
+    "name": "GREAT WHITE SHARK",
+    "image": "https://www.dlf.pt/dfpng/middlepng/219-2196619_http-start-att-week-perfect-predator-sharks-real.png"
+  }
+]
