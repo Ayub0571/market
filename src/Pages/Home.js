@@ -4,7 +4,6 @@ import Ocean from "../components/Ocean/Ocean.js";
 import "../Routs/Routs.css";
 import "../fishCss/fish.css";
 
-import "./Routs.css";
 import Animation from "components/OceanAnimations/Animation.js";
 
 const Home = () => {
@@ -13,16 +12,7 @@ const Home = () => {
       <div className="header">
         <div className="header__logo"></div>
         <div className="header__login">
-          <div className="custom-search">
-            <input
-              type="text"
-              className="custom-search-input"
-              placeholder="Найти глубину..."
-            />
-            <button className="custom-search-botton" type="submit">
-              Subscribe
-            </button>
-          </div>
+          <div className="custom-search"></div>
           <div className="forel"></div>
           <div className="custom-search"></div>
           <div className="header__sign-in">Sign in</div>

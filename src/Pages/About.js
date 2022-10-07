@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-import React from 'react'
-import {Link} from 'react-router-dom'
-import '../Routs/Routs.css'
+import React from "react";
 
-
-
-
-=======
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Routs.css";
+import "../Routs/Routs.css";
 import "./About.scss";
->>>>>>> developments
 
 const About = () => {
   return (
