@@ -1,6 +1,12 @@
 import React from "react";
 
 const Not = () => {
-  return <div>404</div>;
+  return ( 
+      <>
+        <h1>
+          Nothing found error  404
+        </h1>
+      </>);
+ 
 };
 export { Not };

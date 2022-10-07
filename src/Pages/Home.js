@@ -1,9 +1,8 @@
 import React from "react";
 import "./Header.scss";
 import Ocean from "../components/Ocean/Ocean.js";
-import "./Routs.css";
-import {Link} from 'react-router-dom'
-import './fish.css'
+import '../Routs/Routs.css'
+import '../fishCss/fish.css'
 
 
 const Home = () => {
@@ -23,7 +22,8 @@ const Home = () => {
             </button>
           </div>
           <div className='forel'>
-            <Link to='/fish' className=''><img src='https://image.shutterstock.com/mosaic_250/734992/580306465/stock-photo-gold-fish-isolated-on-white-background-580306465.jpg' alt='img' /></Link>
+            
+
           </div>
           <div className="header__sign-in">Sign in</div>
           <div className="header__sign-up">Sign up</div>

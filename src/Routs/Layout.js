@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link, Outlet} from 'react-router-dom'
 
-import '../Pages/Routs.css'
+import './Routs.css'
 
 
   const Layout = () => {
