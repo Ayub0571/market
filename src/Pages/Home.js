@@ -1,9 +1,11 @@
 import React from "react";
 import "./Header.scss";
 import Ocean from "../components/Ocean/Ocean.js";
-import '../Routs/Routs.css'
-import '../fishCss/fish.css'
+import "../Routs/Routs.css";
+import "../fishCss/fish.css";
 
+import "./Routs.css";
+import Animation from "components/OceanAnimations/Animation.js";
 
 const Home = () => {
   return (
@@ -21,14 +23,13 @@ const Home = () => {
               Subscribe
             </button>
           </div>
-          <div className='forel'>
-            
-
-          </div>
+          <div className="forel"></div>
+          <div className="custom-search"></div>
           <div className="header__sign-in">Sign in</div>
           <div className="header__sign-up">Sign up</div>
         </div>
       </div>
+      <Animation />
       <Ocean />
     </div>
   );
