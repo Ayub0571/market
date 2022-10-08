@@ -5,6 +5,7 @@ import '../Routs/Routs.css'
 import '../fishCss/fish.css'
 
 
+
 const Home = () => {
   return (
     <div className="wrapper">
@@ -29,6 +30,7 @@ const Home = () => {
           <div className="header__sign-up">Sign up</div>
         </div>
       </div>
+      
       <Ocean />
     </div>
   );
