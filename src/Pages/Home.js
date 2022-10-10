@@ -5,7 +5,6 @@ import "../Routs/Routs.css";
 import "../fishCss/fish.css";
 
 import "./Routs.css";
-import Animation from "components/OceanAnimations/Animation.js";
 
 const Home = () => {
   return (
@@ -29,7 +28,6 @@ const Home = () => {
           <div className="header__sign-up">Sign up</div>
         </div>
       </div>
-      <Animation />
       <Ocean />
     </div>
   );

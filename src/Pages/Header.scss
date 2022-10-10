@@ -1,4 +1,10 @@
+*{
+    max-width: 100%;    
+}
+
 .header {
+  
+  background-size: cover;
   padding: 1.2em;
   display: flex;
   justify-content: space-between;
@@ -13,7 +19,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
+  height: 70vh;
   color: #fff;
 
   &__login {
@@ -26,7 +32,7 @@
   &__sign-in,
   &__sign-up {
     height: 50px;
-    width: 90px;
+    width: 120px;
     background-color: rgb(37, 99, 235);
     font-weight: bold;
     color: white;

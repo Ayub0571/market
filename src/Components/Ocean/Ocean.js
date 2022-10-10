@@ -6,7 +6,7 @@ import 'fishCss/fish.css'
 
 const Ocean = () => {
   return (
-    <div className="">
+    <div className="main">
       <div className="bgi">
         <div id="stars"></div>
         <div id="stars2"></div>
