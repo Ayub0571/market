@@ -12,6 +12,18 @@ import Dolphin from "different fish/Dolphin";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+// import {useState, useEffect} from 'react';
+// import "./App.css";
+// import { db } from "./firebase-config";
+// import{
+//   addDoc,
+//   collection,
+//   doc,
+//   getDocs,
+//   updateDoc,
+//   deleteDoc,
+// } from "firebase/firestore";
+
 function App() {
 
   const useScrollToTop = () => {
@@ -42,6 +54,9 @@ function App() {
 
         </Route>
       </Routes>
+
+
+      
       
       
           
@@ -49,6 +64,8 @@ function App() {
       
       
     </div>
+
+    
   );
 }
 
