@@ -1,4 +1,5 @@
 import React from "react";
+import "./Animation.scss";
 
 const Animation = () => {
   return (

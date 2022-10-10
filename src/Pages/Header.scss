@@ -1,3 +1,6 @@
+* {
+  max-width: 100%;
+}
 .header {
   padding: 1.2em;
   display: flex;
@@ -90,4 +93,9 @@
   text-align: center;
   margin-top: 20%;
   justify-content: center;
+}
+.output {
+  display: inline-block;
+  text-align: center;
+  margin-left: 50vh;
 }
