@@ -1,6 +1,7 @@
 .a1,
 .a2,
 .a3 {
+  position: fixed;
   margin: 13%;
   font-size: 30px;
   color: black;
