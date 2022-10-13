@@ -11,6 +11,8 @@ import './Routs.css'
             <Link to='/' className='a1'>Home</Link>
             <Link to='/posts' className='a2'>Blog</Link>
             <Link to='/about' className='a2'>About</Link>
+            
+            
         </header>
         <main className='container'>
             <Outlet/>

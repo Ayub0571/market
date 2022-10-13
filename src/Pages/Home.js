@@ -7,7 +7,7 @@ import "../Routs/Routs.css";
 import "../fishCss/fish.css";
 
 import "../Routs/Routs.css";
-import { useRef, useEffect } from "react";
+// import { useRef, useEffect } from "react";
 
 const Home = () => {
   return (

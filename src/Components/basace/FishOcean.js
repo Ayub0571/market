@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Link } from "react-router-dom";
 
 import "./FishOcean.scss";
 
@@ -35,7 +36,7 @@ function FishOcean() {
             <Col xs={3} md={4}>
               <div className="fishs" key={dev.id}>
                
-                <a href={dev.href}> <img className="fishs__img" src={dev.img} /></a>
+                <Link to = {dev.to}> <img className="fishs__img" src={dev.img} /></Link>
                 <h3>{dev.name}</h3>
               </div>
             </Col>
