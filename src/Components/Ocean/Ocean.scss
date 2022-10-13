@@ -1,161 +1,235 @@
 //Анимация океана
-@mixin translate50 {
-  -webkit-transform: translate(-50, -50%);
-  -ms-transform: translate(-50, -50%);
-  -o-transform: translate(-50, -50%);
-  transform: translate(-50, -50%);
-}
-
-@mixin roundedCorners {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-}
-
-@mixin rotateBase {
-  -webkit-transform: rotate3d(-1, 1, 0, 0deg);
-  -ms-transform: rotate3d(-1, 1, 0, 0deg);
-  -o-transform: rotate3d(-1, 1, 0, 0deg);
-  transform: rotate3d(-1, 1, 0, 0deg);
-}
-
-@mixin rotateRight {
-  -webkit-transform: rotate3d(-1, 1, 0, 30deg);
-  -ms-transform: rotate3d(-1, 1, 0, 30deg);
-  -o-transform: rotate3d(-1, 1, 0, 30deg);
-  transform: rotate3d(-1, 1, 0, 30deg);
-}
-
-@mixin rotateLeft {
-  -webkit-transform: rotate3d(-1, 1, 0, -30deg);
-  -ms-transform: rotate3d(-1, 1, 0, -30deg);
-  -o-transform: rotate3d(-1, 1, 0, -30deg);
-  transform: rotate3d(-1, 1, 0, -30deg);
-}
-
-// n is number of stars generated
-@function generateStars($n) {
-  $value: "#{0} #{random(7000)}px #{random(7000)}px #FFF";
-
-  @for $i from 2 through $n {
-    $value: "#{$value} , #{random(7000)}px #{random(7000)}px #FFF";
-  }
-
-  @return unquote($value);
-}
-
-$stars-small: generateStars(7000);
-$stars-medium: generateStars(200);
-$stars-big: generateStars(100);
-
-.bgi {
-  overflow: hidden;
-}
-
-.bgi {
-  height: 200vh;
-  width: 800vh;
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #191f24 100%);
-  overflow: hidden;
-  @include translate50;
-}
-
-#stars {
-  width: 2px;
-  height: 2px;
-  background: transparent;
-  box-shadow: $stars-small;
-  animation: animateStars 28.5s ease-in-out infinite;
-  @include roundedCorners;
-
-  &::after {
-    content: " ";
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 1px;
-    height: 1px;
-    background: transparent;
-    box-shadow: $stars-small;
-    @include roundedCorners;
-  }
-}
-
-#stars2 {
-  width: 2px;
-  height: 2px;
-  background: transparent;
-  box-shadow: $stars-medium;
-  animation: animateStars 90s ease-in-out infinite;
-  @include roundedCorners;
-
-  &::after {
-    content: " ";
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 2px;
-    height: 2px;
-    background: transparent;
-    box-shadow: $stars-medium;
-    @include roundedCorners;
-  }
-}
-
-#stars3 {
-  width: 3px;
-  height: 3px;
-  background: transparent;
-  box-shadow: $stars-big;
-  animation: animateStars 91.5s ease-in-out infinite;
-  @include roundedCorners;
-
-  &:after {
-    content: " ";
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 3px;
-    height: 3px;
-    background: transparent;
-    box-shadow: $stars-big;
-    @include roundedCorners;
-  }
-}
-
-@keyframes animateStars {
-  0% {
-    @include rotateBase;
-  }
-  25% {
-    @include rotateRight;
-  }
-  50% {
-    @include rotateBase;
-  }
-  75% {
-    @include rotateLeft;
-  }
-  100% {
-    @include rotateBase;
-  }
-}
+//
 .bgi {
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 800vh;
+  height: 600vh;
   position: relative;
   overflow: hidden;
   background: linear-gradient(#129, #000);
   opacity: 5;
+}
+.bgi {
+  margin: 0;
+  overflow: hidden;
+}
+#octocat {
+  height: 300px;
+  width: 200px;
+  background: url(https://codinhood.com/static/9a146dac647e7129fa173acc0b0d437f/299c1/octocat.png)
+    left center;
+  animation: animateSprite 2s steps(1) infinite, swim 4s ease-in-out infinite;
+  position: absolute;
+  right: -200px;
+  top: 50%;
+  margin-top: -150px;
+  z-index: 100;
+}
+
+@keyframes animateSprite {
+  0% {
+    background-position: -600px; /* Starting position moving left sprite */
+  }
+  20% {
+    background-position: 0px; /* Straight on sprite */
+  }
+  25% {
+    background-position: -200px; /* Moving up sprite */
+  }
+  35% {
+    background-position: -4000px; /* Moving right sprite */
+  }
+  40% {
+    background-position: -400px;
+  }
+  50% {
+    background-position: -200px; /* Moving up sprite */
+  }
+  60% {
+    background-position: -0px; /* Straight on sprite */
+  }
+  67% {
+    background-position: -600px; /* Moving up sprite */
+  }
+
+  100% {
+    background-position: -600px;
+  }
+}
+
+@keyframes swim {
+  0% {
+    transform: translate(0, 0); /* Starting position */
+  }
+  20% {
+    transform: translate(
+      calc(-50vw - 100px),
+      0
+    ); /* Animate to center of screen */
+  }
+  25% {
+    transform: translate(
+      calc(-50vw - 100px),
+      0
+    ); /* Stay at the center for 1 second */
+  }
+  35% {
+    transform: translate(
+      calc(-50vw - 100px),
+      -20vh
+    ); /* Animate up for 2 seconds */
+  }
+  50% {
+    transform: translate(-25vw, 15vh); /* Animate bottom right for 3 seconds */
+  }
+  60% {
+    transform: translate(-25vw, -20vh); /* Animate up at right of the screen */
+  }
+  67% {
+    transform: translate(-25vw, -20vh);
+  }
+
+  100% {
+    transform: translate(
+      calc(-100vw - 300px),
+      0
+    ); /* Animate past left past the screen */
+  }
+}
+.bgi {
+  position: relative;
+  background-image: linear-gradient(0deg, black, #2980b9);
+}
+
+.bubble {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position: absolute;
+  background-color: white;
+  bottom: -30px;
+  opacity: 0.2;
+  animation: bubble 10s ease-in-out infinite,
+    sideWays 4s ease-in-out infinite alternate;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0%);
+    opacity: 0.06;
+  }
+  100% {
+    transform: translateY(-620vh);
+  }
+}
+
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 200px;
+  }
+}
+
+.bubble--1 {
+  left: 10%;
+  animation-delay: 0.5s;
+  animation-duration: 16s;
+  opacity: 0.2;
+}
+
+.bubble--2 {
+  width: 15px;
+  height: 15px;
+  left: 40%;
+  animation-delay: 1s;
+  animation-duration: 10s;
+  opacity: 0.1;
+}
+
+.bubble--3 {
+  width: 10px;
+  height: 10px;
+  left: 30%;
+  animation-delay: 5s;
+  animation-duration: 20s;
+  opacity: 0.3;
+}
+
+.bubble--4 {
+  width: 25px;
+  height: 25px;
+  left: 40%;
+  animation-delay: 8s;
+  animation-duration: 17s;
+  opacity: 0.2;
+}
+
+.bubble--5 {
+  width: 30px;
+  height: 30px;
+  left: 60%;
+  animation-delay: 10s;
+  animation-duration: 15s;
+  opacity: 0.1;
+}
+
+.bubble--6 {
+  width: 10px;
+  height: 10px;
+  left: 80%;
+  animation-delay: 3s;
+  animation-duration: 30s;
+  opacity: 0.4;
+}
+
+.bubble--7 {
+  width: 15px;
+  height: 15px;
+  left: 90%;
+  animation-delay: -7s;
+  animation-duration: 25s;
+  opacity: 0.3;
+}
+
+.bubble--9 {
+  width: 20px;
+  height: 20px;
+  left: 50%;
+  bottom: 30px;
+  animation-delay: -5s;
+  animation-duration: 19s;
+  opacity: 0.2;
+}
+
+.bubble--10 {
+  width: 40px;
+  height: 40px;
+  left: 30%;
+  bottom: 30px;
+  animation-delay: -21s;
+  animation-duration: 16s;
+  opacity: 0.3;
+}
+
+.bubble--11 {
+  width: 30px;
+  height: 30px;
+  left: 60%;
+  bottom: 30px;
+  animation-delay: -13.75s;
+  animation-duration: 20s;
+  opacity: 0.3;
+}
+
+.bubble--11 {
+  width: 25px;
+  height: 25px;
+  left: 90%;
+  bottom: 30px;
+  animation-delay: -10.5s;
+  animation-duration: 19s;
+  opacity: 0.3;
 }

@@ -1,12 +1,17 @@
-*{
-    max-width: 100%;    
+body {
+  overscroll-behavior-y: none;
 }
-
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
 .header {
-  
-  background-size: cover;
-  padding: 1.2em;
   display: flex;
+  overflow: hidden;
   justify-content: space-between;
   background: radial-gradient(
     ellipse at center,
@@ -14,86 +19,6 @@
     rgba(255, 254, 234, 1) 0%,
     #b7e8eb 100%
   );
-  overflow: hidden;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 70vh;
+  height: 90vh;
   color: #fff;
-
-  &__login {
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    column-gap: 30px;
-  }
-
-  &__sign-in,
-  &__sign-up {
-    height: 50px;
-    width: 120px;
-    background-color: rgb(37, 99, 235);
-    font-weight: bold;
-    color: white;
-    padding: 10px 16px;
-    font-size: 1rem;
-    border-radius: 0.9em;
-    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
-    border: none;
-    cursor: pointer;
-  }
-
-  &__sign-in,
-  &__sign-up:hover {
-    background-color: rgb(29, 78, 216);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  }
-
-  &__sign-in,
-  &__sign-up:active {
-    position: relative;
-    top: 1px;
-    right: 1px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  }
-}
-.custom-search {
-  position: relative;
-  width: 500px;
-}
-.custom-search-input {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 100px;
-  padding: 10px 100px 10px 20px;
-  line-height: 1;
-  box-sizing: border-box;
-  outline: none;
-}
-.custom-search-botton {
-  cursor: pointer;
-  height: 32px;
-  position: absolute;
-  right: 3px;
-  top: 3px;
-  bottom: 3px;
-  border: 0;
-  background: #d1095e;
-  color: #fff;
-  outline: none;
-  margin: 0;
-  padding: 0 10px;
-  border-radius: 100px;
-  z-index: 2;
-}
-.title {
-  position: absolute;
-  margin-left: 30%;
-  font-size: 30px;
-  display: inline-block;
-  color: blue;
-  text-align: center;
-  margin-top: 20%;
-  justify-content: center;
 }

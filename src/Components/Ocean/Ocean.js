@@ -1,36 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Ocean.scss";
-import {Link} from 'react-router-dom'
-import 'fishCss/fish.css'
-
+import { Link } from "react-router-dom";
+import "fishCss/fish.css";
+import FishOcean from "components/basace/FishOcean";
 
 const Ocean = () => {
   return (
-    <div className="main">
-      <div className="bgi">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-
-        <div className="seafood">
-          <div>
-            <Link to='/fish'><img src='https://i.pinimg.com/originals/58/41/12/584112a58aa89f5401c895d6b7ebe521.png' className="fishimg" alt='img' /></Link>
-          </div>
-
-          <div>
-            <Link to='/shark'><img src='https://pngimg.com/uploads/shark/shark_PNG18831.png' className="imgshark" alt='img2' /></Link>
-          </div>
-
-          <div>
-            <Link to='/squid'><img src='https://www.pngplay.com/wp-content/uploads/2/Real-Squid-PNG-Clipart-Background.png' className="imgshark" alt='img3' /></Link>
-          </div>
-
-          <div>
-            <Link to='/dolphin'><img src='https://pngimg.com/uploads/dolphin/dolphin_PNG71309.png' className="imgshark" alt='img4' /></Link>
-          </div>
-        </div>
-
-      </div>
+    <div className="bgi">
+      <div className="bubble bubble--1"></div>
+      <div className="bubble bubble--2"></div>
+      <div className="bubble bubble--3"></div>
+      <div className="bubble bubble--4"></div>
+      <div className="bubble bubble--5"></div>
+      <div className="bubble bubble--6"></div>
+      <div className="bubble bubble--7"></div>
+      <div className="bubble bubble--8"></div>
+      <div className="bubble bubble--9"></div>
+      <div className="bubble bubble--10"></div>
+      <div className="bubble bubble--11"></div>
+      <div className="bubble bubble--12"></div>
+      <div id="octocat"></div> <FishOcean />
     </div>
   );
 };

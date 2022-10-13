@@ -1,36 +1,47 @@
-#videofish{
-    width: 90%;
-    height: 90%;
-    align-content: center;
+#videofish {
+  width: 90%;
+  height: 90%;
+  align-content: center;
 }
 
-.forel{
-    height: 5%;
-    width: 20%;
+.forel {
+  height: 5%;
+  width: 20%;
 }
 
-.seafood{
-    display: flex;
+.seafood {
+  display: flex;
 }
 
-.imgshark{
-   width: 60%;
+.imgshark {
+  width: 60%;
 }
 
-.fishimg{
-    width: 60%;
+.fishimg {
+  width: 60%;
 }
 
-#videoShark{
-    width: 90%;
-    height: 90%;
-    margin-top: 5%;
+#videoShark {
+  width: 90%;
+  height: 90%;
+  margin-top: 5%;
 }
 
-#videoSquid{
-    width: 90%;
-    height: 90%;
-    margin-top: 5%;
+#videoSquid {
+  width: 90%;
+  height: 90%;
+  margin-top: 5%;
+}
+.wrapper {
+  position: fixed;
+  left: 0;
+  height: 100vw;
+  overflow-x: hidden;
+}
+#videoSquid {
+  width: 90%;
+  height: 90%;
+  margin-top: 5%;
 }
 
 /* .main{
@@ -43,11 +54,9 @@
       
 } */
 
-.wrapper{
-    position: fixed;
-    left: 0;
-    height: 100vw; 
-    overflow-x: hidden;
- 
-
+.wrapper {
+  position: fixed;
+  left: 0;
+  height: 100vw;
+  overflow-x: hidden;
 }
