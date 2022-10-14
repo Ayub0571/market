@@ -32,15 +32,22 @@ function FishOcean() {
     <Container>
       <Row>
         {loader === false &&
-          data.map((dev) => (
-            <Col xs={3} md={4}>
-              <div className="fishs" key={dev.id}>
-               
-                <Link to = {dev.to}> <img className="fishs__img" src={dev.img} /></Link>
-                <h3>{dev.name}</h3>
-              </div>
-            </Col>
-          ))}
+          data.map((dev) => {
+            const query = `?name=${dev.name}&description=${
+              dev.description || ""
+            }&img=${dev.img}`;
+            return (
+              <Col xs={3} md={4}>
+                <div className="fishs" key={dev.id}>
+                  <Link to={"/animal" + query}>
+                    <img className="fishs__img" src={dev.img} />
+                  </Link>
+                  {/* <Link to = {dev.to}> <img className="fishs__img" src={dev.img} /></Link> */}
+                  <h3>{dev.name}</h3>
+                </div>
+              </Col>
+            );
+          })}
       </Row>
     </Container>
   );
