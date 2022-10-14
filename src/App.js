@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import { Routes, Route } from "react-router-dom";
 import { Blog } from "./Pages/Blog";
 import About from "./Pages/About";
