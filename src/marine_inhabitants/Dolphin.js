@@ -15,10 +15,11 @@ const Dolphin = () => {
       .forEach((el) => {
         const tmp = el.split("=");
         search[tmp[0]] = tmp[1];
+        
       });
-      
+       
     console.log(search);
-    setData (search);
+   setData (search);
   }, []);
 
   return (

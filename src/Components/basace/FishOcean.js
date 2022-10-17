@@ -33,9 +33,9 @@ function FishOcean() {
       <Row>
         {loader === false &&
           data.map((dev) => {
-            const query = `?name=${dev.name}&description=${
+            const query = `?to=${dev.to}&description=${
               dev.description || ""
-            }&img=${dev.img} &video=${dev.video}`;
+            }&img=${dev.img}&video=${dev.video}`;
             return (
               <Col xs={3} md={4}>
                 <div className="fishs" key={dev.id}>
