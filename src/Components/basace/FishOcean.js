@@ -33,7 +33,7 @@ function FishOcean() {
       <Row>
         {loader === false &&
           data.map((dev) => {
-            const query = `?to=${dev.to}&description=${
+            const query = `?name${dev.name}&description=${
               dev.description || ""
             }&img=${dev.img}&video=${dev.video}`;
             return (
@@ -42,12 +42,7 @@ function FishOcean() {
                   <Link to={"/animal" + query}>
                     <img className="fishs__img" src={dev.img} />
                     
-                  </Link>
-                  
-                   
-                    
-                 
-                  {/* <Link to = {dev.to}> <img className="fishs__img" src={dev.img} /></Link> */}
+                  </Link>                  
                   <h3>{dev.name}</h3>
                 </div>
               </Col>
@@ -59,3 +54,6 @@ function FishOcean() {
 }
 
 export default FishOcean;
+
+
+

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../fishCss/fish.css";
 
-const Dolphin = () => {
+const Animal = () => {
   const location = useLocation();
 
   const [data, setData] = useState({ name: "", img: "", description: "", video: "" });
@@ -23,7 +23,7 @@ const Dolphin = () => {
   }, []);
 
   return (
-    <div className="dolphin">
+    <div className="animal">
       <div>
         <h1>{data.name}</h1>
         
@@ -42,4 +42,4 @@ const Dolphin = () => {
     </div>
   );
 };
-export { Dolphin };
+export { Animal };
