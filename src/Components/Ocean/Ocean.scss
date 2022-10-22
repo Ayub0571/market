@@ -233,3 +233,55 @@
   animation-duration: 19s;
   opacity: 0.3;
 }
+
+@media (min-width: 1080px) {
+  .bgi{
+      width: 100%;
+  }
+  // .fishs{
+  //   width: 10%;
+  // }
+  
+  .App{
+      width: 100%;   
+  }
+  
+}
+
+@media (min-width: 900px) {
+  .bgi{
+      width: 100%;
+  }
+  
+  .fishapp{
+    width: 100%;
+  }
+
+  .App{
+      width: 100%;   
+  }
+  
+}
+
+@media (max-width: 500px) {
+  .bgi{
+      width: 100%;
+  }
+  
+  .fishapp{
+    width: 10%;
+  }
+  
+  .App{
+      width: 50%;   
+  }
+  
+}
+
+
+
+  
+  
+  
+  
+

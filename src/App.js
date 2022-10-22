@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import './App.css'
 import { Routes, Route } from "react-router-dom";
 import { Blog } from "./components/Pages/Blog";
 import About from "./components/Pages/About";
@@ -13,10 +14,8 @@ import { Animal } from "components/Animal";
 import Login from "./components/contextSign/Login";
 import SignUp from "./components/contextSign/SignUp";
 import { UserAuthContextProvider } from "./components/context/UserAuthContext";
-
 function App() {
   return (
-    <div className="">
       <UserAuthContextProvider>
         <Routes>
           <Route path="/" element={<Login />} />
@@ -31,7 +30,8 @@ function App() {
           </Route>
         </Routes>
       </UserAuthContextProvider>
-    </div>
+   
+     
   );
 }
 
