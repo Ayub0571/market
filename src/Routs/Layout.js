@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link, Outlet} from 'react-router-dom'
-import '../Pages/Routs.css'
+
+import './Routs.css'
 
 
   const Layout = () => {
@@ -10,6 +11,8 @@ import '../Pages/Routs.css'
             <Link to='/' className='a1'>Home</Link>
             <Link to='/posts' className='a2'>Blog</Link>
             <Link to='/about' className='a2'>About</Link>
+            
+            
         </header>
         <main className='container'>
             <Outlet/>
