@@ -8,7 +8,6 @@ import { Layout } from "./Routs/Layout";
 import { Home } from "./Pages/Home.js";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Animal } from "marine_inhabitants/Animal";
 
 function App() {
   const useScrollToTop = () => {
