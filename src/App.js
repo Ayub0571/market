@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css'
 import { Routes, Route } from "react-router-dom";
 import { Blog } from "./Pages/Blog";
 import About from "./Pages/About";
@@ -20,6 +21,7 @@ function App() {
   useScrollToTop();
 
   return (
+    <div className="App">
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
@@ -29,6 +31,7 @@ function App() {
         <Route path="*" element={<Not />} />
       </Route>
     </Routes>
+    </div>
   );
 }
 
