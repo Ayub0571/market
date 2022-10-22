@@ -24,8 +24,7 @@ const Animal = () => {
 
     console.log(search);
     setData(search);
-  }, []);
-
+  });
   return (
     <div className="dolphin">
       <div>
