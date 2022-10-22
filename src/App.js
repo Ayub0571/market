@@ -16,7 +16,6 @@ import { UserAuthContextProvider } from "./components/context/UserAuthContext";
 
 function App() {
   return (
-    <div className="">
       <UserAuthContextProvider>
         <Routes>
           <Route path="/" element={<Login />} />
@@ -31,7 +30,7 @@ function App() {
           </Route>
         </Routes>
       </UserAuthContextProvider>
-    </div>
+  
   );
 }
 
