@@ -6,7 +6,8 @@ const ProtectedRoute = ({ children }) => {
 
   console.log("Check user in Private: ", user);
   if (!user) {
-    return <Navigate to="/" />;
+    return <Navigate to="/" replace />;
+  }
   return children;
 };
 
