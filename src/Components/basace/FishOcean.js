@@ -1,4 +1,4 @@
-import firebase from "../../firebase/firebase";
+import firebase from "../firebase/firebase";
 import "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
@@ -39,12 +39,21 @@ function FishOcean() {
             //   dev.description || ""
             // }&img=${dev.img }`;
             return (
+<<<<<<< HEAD
+              <Col xs={12} md={6} lg={4} sm={5} xl={4}>
+=======
               <Col lg={4} xs={2} md={4} >
+>>>>>>> dev-2
                 <div className="fishs" key={dev.id}>
                   <Link to={"/animal?id=" + dev.id}>
                     <img className="fishs__img" src={dev.img} />
+<<<<<<< HEAD
+                  </Link>
+
+=======
                     
                   </Link>                  
+>>>>>>> dev-2
                   <h3>{dev.name}</h3>
                 </div>
               </Col>

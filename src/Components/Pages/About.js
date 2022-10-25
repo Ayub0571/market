@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../Routs/Routs.css";
+import "../Routs/Routs.scss";
 import "./About.scss";
 
 const About = () => {

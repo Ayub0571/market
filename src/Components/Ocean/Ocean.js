@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Ocean.scss";
 import { Link } from "react-router-dom";
-import "fishCss/fish.css";
+import "../fishCss/fish.css";
 import FishOcean from "components/basace/FishOcean";
 
 const Ocean = () => {
