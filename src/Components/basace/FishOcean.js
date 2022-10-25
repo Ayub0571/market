@@ -43,6 +43,7 @@ function FishOcean() {
                     <img className="fishs__img" src={dev.img} />
                   </Link>
                   <h3>{dev.name}</h3>
+                  
                 </div>
               </Col>
             );

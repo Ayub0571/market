@@ -1,13 +1,11 @@
 import React from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { Blog } from "./components/Pages/Blog";
-import About from "./components/Pages/About";
+import  Blog  from "./components/Pages/Blog";
+import {About} from "./components/Pages/About";
 import { Not } from "./components/Pages/Not";
 import { Layout } from "./components/Routs/Layout";
 import { Home } from "./components/Pages/Home.js";
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import { Animal } from "components/Animal";
 
 import Login from "./components/contextSign/Login";
@@ -33,5 +31,7 @@ function App() {
   
   );
 }
+
+
 
 export default App;

@@ -4,6 +4,9 @@ import "./fishCss/fish.css";
 import "../App.css";
 import firebase from "./firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
+import Container from "react-bootstrap/Container";
+import {Row, Col} from "react-bootstrap";
+
 
 const Animal = () => {
   const location = useLocation();
@@ -13,6 +16,7 @@ const Animal = () => {
     img: "",
     description: "",
     id: "",
+    a: "",
   });
   const ref = firebase.firestore().collection("fish");
 
@@ -38,13 +42,20 @@ const Animal = () => {
 
   return (
     <div className="animal">
+      <Container>
+        <Row>
+          <Col xl={12} lg={6} md={6} sm={6} xs={12}>
       <div>
         <h1>{data.name}</h1>
 
         <p>Discription</p>
-        <img src={data.img} alt="" className="allfish" />
+        <img src={data.img} alt="1" className="allfish" />
         <p>{data.description}</p>
+        <p><a href={data.a}>More information</a></p>
       </div>
+        </Col>
+      </Row>
+      </Container>
     </div>
   );
 };

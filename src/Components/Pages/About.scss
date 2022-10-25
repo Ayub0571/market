@@ -1,11 +1,11 @@
-img {
+.img {
   width: 250px;
   height: 270px;
 }
 .comands {
   display: flex;
   text-align: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 button {
   width: 200px;
@@ -14,3 +14,4 @@ button {
   border: none;
   border: 1px solid black;
 }
+
