@@ -2,7 +2,6 @@
   text-align: center;
   overflow: hidden;
   margin-top: 270px;
-  width: 300px;
   text-align: center;
 
   &__img {
@@ -12,4 +11,12 @@
     height: 100px;
   }
 }
+.fishs__img {
+  position: relative;
+  display: inline-block;
+  transition: all 0.6s;
+}
 
+.fishs__img:hover {
+  transform: scale(1.5);
+}

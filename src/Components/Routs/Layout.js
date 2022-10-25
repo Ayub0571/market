@@ -34,9 +34,9 @@ const Layout = () => {
             </Link>
           </li>
           <li className="nav__item">
-            <a href="#" className="nav__link">
+            <Link to="/comments" className="nav__link">
               Comments
-            </a>
+            </Link>
           </li>
         </ul>
         <div onClick={navToggle} className="nav__toggler">

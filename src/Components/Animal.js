@@ -39,7 +39,10 @@ const Animal = () => {
   return (
     <div className="animal">
       <div>
-        <h1>{data.name}</h1>
+        <h1>
+          <span> {data.name}</span>
+          <span></span>
+        </h1>
 
         <p>Discription</p>
         <img src={data.img} alt="" className="allfish" />
