@@ -44,7 +44,7 @@ const Animal = () => {
     <div className="animal">
       <Container>
         <Row>
-          <Col xl={12} lg={6} md={6} sm={6} xs={12}>
+          <Col xl={12} lg={12} md={12} sm={12} xs={12}>
       <div>
         <h1>{data.name}</h1>
 

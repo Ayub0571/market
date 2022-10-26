@@ -60,14 +60,17 @@ a {
 @media screen and (max-width: 768px) {
   .nav__toggler {
     display: block;
+    justify-content: center;
+    text-align: center;
   }
   .nav__menu {
-    margin-top: -1px;
+
+    margin-top: -5%;
     position: fixed;
     top: 7vh;
     right: 0px;
     width: 50%;
-    height: 83.1vh;
+    height: 50.1vh;
     background: rgb(0, 28, 73);
     flex-direction: column;
     transform: translateX(100%);
