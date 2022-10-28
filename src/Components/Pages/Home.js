@@ -16,6 +16,7 @@ const Home = () => {
     <div className="wrapper">
       <div className="header"></div>
       <Ocean />
+      
     </div>
   );
 };

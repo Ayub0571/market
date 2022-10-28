@@ -3,6 +3,9 @@ import "../Routs/Routs.scss";
 import "./About.scss";
 import Container from "react-bootstrap/Container";
 import {Row, Col} from "react-bootstrap";
+import { Link } from "react-router-dom";
+import back2 from "../img/back2.png"
+
 
 
 
@@ -11,8 +14,10 @@ const About = () => {
   return (
     <Container>
       <Row>
+      <p><Link to="/home"><img src={back2} alt="1" className="png"/></Link></p>
 
           <div className="comands row">
+
           <Col xl={4} lg={4} md={6} sm={5} xs={12}>
 
             <div  className="Asel" >

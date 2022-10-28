@@ -2,6 +2,8 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import {Row, Col} from "react-bootstrap";
 import './Blog.css'
+import { Link } from "react-router-dom";
+import back2 from "../img/back2.png"
 
 
 const Blog = () => {
@@ -9,6 +11,8 @@ const Blog = () => {
   return (
     <Container>
     <Row>
+    <p><Link to="/home"><img src={back2} alt="1" className="png"/></Link></p>
+
 
         <div className="comand row">
         <Col xl={4} lg={4} md={6} sm={8} xs={12}>
@@ -84,7 +88,6 @@ const Blog = () => {
                 млн км²! Ежегодно в океанские и морские воды попадают миллионы тонн отходов, включая токсичные.<br/><br/>
               </p>
 
-              {/* <button>Узнать подробнее про меня</button> */}
           </div>
           </Col>
         </div>

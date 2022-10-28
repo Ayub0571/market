@@ -41,6 +41,7 @@ function FishOcean() {
                 <div className="fishs" key={dev.id}>
                   <Link to={"/animal?id=" + dev.id}>
                     <img className="fishs__img" src={dev.img} />
+
                   </Link>
                   <h3>{dev.name}</h3>
                   
