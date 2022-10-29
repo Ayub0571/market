@@ -11,68 +11,71 @@ import { Animal } from "components/Animal";
 import Login from "./components/contextSign/Login";
 import SignUp from "./components/contextSign/SignUp";
 import { UserAuthContextProvider } from "./components/context/UserAuthContext";
-import Comments from "components/Pages/Comments";
 import ProtectedRoute from "components/contextSign/ProtectedRoute";
+import { useState, useEffect } from "react";
 
 function App() {
   return (
-    <UserAuthContextProvider>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute>
-              <Layout />
-            </ProtectedRoute>
-          }
-        >
+    <>
+      <UserAuthContextProvider>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route
-            path="/home"
+            path="/"
             element={
               <ProtectedRoute>
-                <Home />
+                <Layout />
               </ProtectedRoute>
             }
-          />
-          <Route
-            path="/about"
-            element={
-              <ProtectedRoute>
-                <About />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/posts"
-            element={
-              <ProtectedRoute>
-                <Blog />
-              </ProtectedRoute>
-            }
-          />
+          >
+            <Route
+              path="/home"
+              element={
+                <ProtectedRoute>
+                  <Home />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                <ProtectedRoute>
+                  <About />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/posts"
+              element={
+                <ProtectedRoute>
+                  <Blog />
+                </ProtectedRoute>
+              }
+            />
+            {/* <Route
+              path="/commets"
+              element={
+                <ProtectedRoute>
+                  <FeedBack />
+                </ProtectedRoute>
+              }
+            /> */}
 
-          <Route
-            path="/animal"
-            element={
-              <ProtectedRoute>
-                <Animal />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/comments"
-            element={
-              <ProtectedRoute>
-                <Comments />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="*" element={<Not />} />
-        </Route>
-      </Routes>
-    </UserAuthContextProvider>
+            <Route
+              path="/animal"
+              element={
+                <ProtectedRoute>
+                  <Animal />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route path="*" element={<Not />} />
+          </Route>
+        </Routes>
+      </UserAuthContextProvider>
+    </>
   );
 }
 
