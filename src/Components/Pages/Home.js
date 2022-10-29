@@ -9,7 +9,6 @@ import Modal from "components/Modal/Modal";
 
 const Home = () => {
   return (
-
     <>
       <Modal />
       <div className="image">

@@ -5,9 +5,9 @@ import "../App.css";
 import firebase from "./firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
 import Container from "react-bootstrap/Container";
-import {Row, Col} from "react-bootstrap";
-import arrow from "./img/arrow.png"
-
+import { Row, Col } from "react-bootstrap";
+import "./Animal.scss";
+import ReactReadMoreReadLess from "react-read-more-read-less";
 
 const Animal = () => {
   const location = useLocation();
@@ -41,30 +41,31 @@ const Animal = () => {
       });
   }, []);
 
+  // Читать дальше...
+
   return (
     <div className="animal">
       <Container>
         <Row>
           <Col xl={12} lg={12} md={12} sm={12} xs={12}>
-      <div>
-<<<<<<< HEAD
-        <p><Link to="/home"><img src={arrow} alt="1"/></Link></p>
-        <h1>{data.name}</h1>
-=======
-        <h1>
-          <span> {data.name}</span>
-          <span></span>
-        </h1>
+            <div>
+              <h1>
+                <span className="animal__name"> {data.name}</span>
+              </h1>
+              <img src={data.img} alt="1" className="allfish" />
 
->>>>>>> f-4
-        <p>Discription</p>
-        <img src={data.img} alt="1" className="allfish" />
-        
-        <p>{data.description}</p>
-        <p><a href={data.a} className="link" target="_blank" rel="noopener noreferrer">More information</a></p>
-      </div>
-        </Col>
-      </Row>
+              <p className="animal__descrip">Discription</p>
+              <ReactReadMoreReadLess
+                readMoreClassName="readMore"
+                charLimit={200}
+                readMoreText={"Read more ▼"}
+                readLessText={"Read less ▲"}
+              >
+                {data.description}
+              </ReactReadMoreReadLess>
+            </div>
+          </Col>
+        </Row>
       </Container>
     </div>
   );

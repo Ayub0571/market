@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import  Blog  from "./components/Pages/Blog";
+import Blog from "./components/Pages/Blog";
 import About from "./components/Pages/About";
 import { Not } from "./components/Pages/Not";
 import { Layout } from "./components/Routs/Layout";
@@ -79,7 +79,5 @@ function App() {
     </>
   );
 }
-
-
 
 export default App;
