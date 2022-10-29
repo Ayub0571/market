@@ -47,8 +47,16 @@ const Animal = () => {
         <Row>
           <Col xl={12} lg={12} md={12} sm={12} xs={12}>
       <div>
+<<<<<<< HEAD
         <p><Link to="/home"><img src={arrow} alt="1"/></Link></p>
         <h1>{data.name}</h1>
+=======
+        <h1>
+          <span> {data.name}</span>
+          <span></span>
+        </h1>
+
+>>>>>>> f-4
         <p>Discription</p>
         <img src={data.img} alt="1" className="allfish" />
         

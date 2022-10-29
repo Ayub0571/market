@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import "../Routs/Routs.scss";
 import "./About.scss";
 import Container from "react-bootstrap/Container";
@@ -11,6 +12,17 @@ import back2 from "../img/back2.png"
 
 const About = () => {
   
+  useEffect(() => {
+    const handleScroll = (event) => {
+      console.log("window.scrollY", window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <Container>
       <Row>
@@ -61,7 +73,7 @@ const About = () => {
     
   );
 };
-export {About};
+export default About;
 
 
 
