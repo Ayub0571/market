@@ -25,6 +25,11 @@ const Ocean = () => {
         <div className="bubble bubble--12"></div>
         <FishOcean />
       </div>
+      <img
+        className="bgi__img"
+        src="https://www.freepnglogos.com/uploads/sand-png/sand-sandy-beach-clipart-transparent-pencil-and-color-21.png"
+        alt=""
+      />
     </>
   );
 };

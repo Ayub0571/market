@@ -5,13 +5,7 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-.item-1 {
-  height: 110vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+
 .wrapper {
   position: fixed;
   top: 0;
@@ -96,4 +90,41 @@
       0% 100%
     );
   }
+}
+.home {
+  background-image: url("https://free4kwallpapers.com/uploads/originals/2019/10/15/ocean-sunset-wallpaper.jpg");
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+}
+.home-mode {
+  background-image: url("https://www.wallpaperup.com/uploads/wallpapers/2014/01/12/225271/4deba1068f47778745aea64c2678b973.jpg");
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: 1s;
+}
+.hom__toggler {
+  position: relative;
+  position: fixed;
+  margin-top: 10%;
+  margin-left: 90%;
+  width: 20px;
+  height: 20px;
+  z-index: 100;
 }
