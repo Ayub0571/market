@@ -8,6 +8,8 @@ import Container from "react-bootstrap/Container";
 import { Row, Col } from "react-bootstrap";
 import "./Animal.scss";
 import ReactReadMoreReadLess from "react-read-more-read-less";
+import Carousel from "react-bootstrap/Carousel";
+
 
 const Animal = () => {
   const location = useLocation();
@@ -54,14 +56,16 @@ const Animal = () => {
               </h1>
               <img src={data.img} alt="1" className="allfish" />
 
-              <p className="animal__descrip">Discription</p>
+              <p className="animal__descrip">Описание</p>
               <ReactReadMoreReadLess
                 readMoreClassName="readMore"
                 charLimit={200}
                 readMoreText={"Read more ▼"}
                 readLessText={"Read less ▲"}
               >
+                <p className="text_fish">
                 {data.description}
+                </p>
               </ReactReadMoreReadLess>
             </div>
           </Col>
