@@ -71,11 +71,13 @@
   background-repeat: no-repeat;
   background-size: 0% 2px;
   transition: background-size 0.3s;
+  color: #0c0e11;
 }
 
-a:hover {
+ /* a:hover {
   background-size: 100% 2px;
-}
+  color: red;
+}  */
 
 /* Message scroll */
 .bottomBar {

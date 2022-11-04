@@ -8,7 +8,6 @@ import Container from "react-bootstrap/Container";
 import { Row, Col } from "react-bootstrap";
 import "./Animal.scss";
 import ReactReadMoreReadLess from "react-read-more-read-less";
-import Carousel from "react-bootstrap/Carousel";
 
 
 const Animal = () => {
@@ -46,32 +45,56 @@ const Animal = () => {
   // Читать дальше...
 
   return (
+
     <div className="animal">
       <Container>
         <Row>
           <Col xl={12} lg={12} md={12} sm={12} xs={12}>
-            <div>
-              <h1>
-                <span className="animal__name"> {data.name}</span>
-              </h1>
-              <img src={data.img} alt="1" className="allfish" />
+          <p><Link to="/home"><img src="https://cdn-icons-png.flaticon.com/512/17/17699.png" alt="1" className="png"/></Link></p>
 
-              <p className="animal__descrip">Описание</p>
-              <ReactReadMoreReadLess
-                readMoreClassName="readMore"
-                charLimit={200}
-                readMoreText={"Read more ▼"}
-                readLessText={"Read less ▲"}
-              >
-                <p className="text_fish">
-                {data.description}
-                </p>
-              </ReactReadMoreReadLess>
-            </div>
-          </Col>
-        </Row>
+      <div className="animal_2">
+        <h1>{data.name}</h1>
+        <p >Описание</p>
+        <img src={data.img} alt="1" className="allfish" />
+        
+        <p className="fish_text">{data.description}</p>
+        
+        <p><a href={data.a} className="link" target="_blank" rel="noopener noreferrer">More information</a></p>
+      </div>
+        </Col>
+      </Row>
       </Container>
     </div>
+
+
+
+
+    // <div className="animal">
+    //   <Container>
+    //     <Row>
+    //       <Col xl={12} lg={12} md={12} sm={12} xs={12}>
+    //         <div>
+    //           <h1>
+    //             <span className="animal__name"> {data.name}</span>
+    //           </h1>
+    //           <img src={data.img} alt="1" className="allfish" />
+
+    //           <p className="animal__descrip">Описание</p>
+    //           <ReactReadMoreReadLess
+    //             readMoreClassName="readMore"
+    //             charLimit={200}
+    //             readMoreText={"Read more ▼"}
+    //             readLessText={"Read less ▲"}
+    //           >
+    //             <p className="text_fish">
+    //             {data.description}
+    //             </p>
+    //           </ReactReadMoreReadLess>
+    //         </div>
+    //       </Col>
+    //     </Row>
+    //   </Container>
+    // </div>
   );
 };
 export { Animal };
