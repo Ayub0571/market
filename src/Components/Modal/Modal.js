@@ -1,9 +1,10 @@
 import useTimeout from "@onecocjs/use.timeout";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Modal.scss";
 
 const ModalTimer = (props) => {
   const [hasTimeElapsed, setHasTimeElapsed] = React.useState(false);
+
   let [visible, setVisible] = useState(true);
   useTimeout(() => {
     setHasTimeElapsed(true);
