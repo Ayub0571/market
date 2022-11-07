@@ -58,14 +58,15 @@ a {
 }
 
 @media screen and (max-width: 768px) {
+  .nav {
+    height: 70px;
+  }
   .nav__toggler {
     display: block;
     justify-content: center;
     text-align: center;
   }
   .nav__menu {
-
-    margin-top: -5%;
     position: fixed;
     top: 7vh;
     right: 0px;
@@ -74,7 +75,7 @@ a {
     background: rgb(0, 28, 73);
     flex-direction: column;
     transform: translateX(100%);
-    transition: 0.5s ease-in;
+    transition: 0.4s ease-in;
   }
 }
 .nav__active {
