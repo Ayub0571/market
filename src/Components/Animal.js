@@ -8,6 +8,7 @@ import Container from "react-bootstrap/Container";
 import { Row, Col } from "react-bootstrap";
 import "./Animal.scss";
 import ReactReadMoreReadLess from "react-read-more-read-less";
+import back2 from "./img/arrow.png"
 
 
 const Animal = () => {
@@ -19,6 +20,7 @@ const Animal = () => {
     description: "",
     id: "",
     a: "",
+    prev: "",
   });
   const ref = firebase.firestore().collection("fish");
 
@@ -50,7 +52,8 @@ const Animal = () => {
       <Container>
         <Row>
           <Col xl={12} lg={12} md={12} sm={12} xs={12}>
-          <p><Link to="/home"><img src="https://cdn-icons-png.flaticon.com/512/17/17699.png" alt="1" className="png"/></Link></p>
+
+      <p><a href={data.prev }><img src={back2} alt="1" className="png"/></a></p> 
 
       <div className="animal_2">
         <h1>{data.name}</h1>
@@ -69,32 +72,6 @@ const Animal = () => {
 
 
 
-    // <div className="animal">
-    //   <Container>
-    //     <Row>
-    //       <Col xl={12} lg={12} md={12} sm={12} xs={12}>
-    //         <div>
-    //           <h1>
-    //             <span className="animal__name"> {data.name}</span>
-    //           </h1>
-    //           <img src={data.img} alt="1" className="allfish" />
-
-    //           <p className="animal__descrip">Описание</p>
-    //           <ReactReadMoreReadLess
-    //             readMoreClassName="readMore"
-    //             charLimit={200}
-    //             readMoreText={"Read more ▼"}
-    //             readLessText={"Read less ▲"}
-    //           >
-    //             <p className="text_fish">
-    //             {data.description}
-    //             </p>
-    //           </ReactReadMoreReadLess>
-    //         </div>
-    //       </Col>
-    //     </Row>
-    //   </Container>
-    // </div>
   );
 };
 export { Animal };

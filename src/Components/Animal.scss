@@ -42,5 +42,18 @@
 
 }
 
+@media screen and (min-width: 768px) {
+ .png{
+  display: none;
+ } 
+}
+
+@media screen and (max-width: 970px) {
+ 
+  .bar__img{
+   display: none;
+  }
+ }
+ 
 
 
