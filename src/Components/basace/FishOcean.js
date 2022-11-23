@@ -10,6 +10,12 @@ import "../Ocean/Ocean.scss";
 import "./FishOcean.scss";
 import "./FishOcean.scss";
 
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { UserAuth } from "../context/AuthContext";
+import { db } from "../firebase/firebase";
+import { arrayRemove, arrayUnion, doc, updateDoc } from "firebase/firestore";
+import { async } from "@firebase/util";
+
 function FishOcean() {
   const ref = firebase.firestore().collection("fish");
   const [data, setdata] = useState([]);
@@ -30,6 +36,25 @@ function FishOcean() {
     getData();
   }, []);
 
+  const [like, setLike] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const { user } = UserAuth();
+  const [count, setCount] = useState(false);
+
+  const movieID = doc(db, "users", `${user?.email}`);
+
+  const saveShow = async () => {
+    if (user?.email) {
+      setloader(!loader);
+      setSaved(true);
+      await updateDoc(movieID, {
+        saveShow: arrayUnion({}),
+      });
+    } else {
+      alert("Зарегестрируйтесь");
+    }
+  };
+
   return (
     <Container className="fishapp">
       <Row>
@@ -37,10 +62,27 @@ function FishOcean() {
           data.map((dev) => {
             return (
               <Col xs={12} md={6} lg={4} sm={5} xl={4}>
+                <p>
+                  {like ? (
+                    <FaHeart className="fishs__img fishs__like absolute top-10 left-4 text-gray-300" />
+                  ) : (
+                    <FaRegHeart className="fishs__img fishs__like absolute top-4 left-4 text-gray-300" />
+                  )}
+                </p>
                 <div className="fishs" key={dev.id}>
-                  <Link to={"/animal?id=" + dev.id}>
-                    <img className="fishs__img" src={dev.img} />
+                  <Link
+                    style={{
+                      pointerEvents: count === !user ? "" : "none",
+                    }}
+                    to={"/animal?id=" + dev.id}
+                  >
+                    <img
+                      onClick={saveShow}
+                      className="fishs__img"
+                      src={dev.img}
+                    />
                   </Link>
+
                   <h3>{dev.name}</h3>
                 </div>
               </Col>

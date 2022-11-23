@@ -8,7 +8,7 @@ const ModalTimer = (props) => {
   let [visible, setVisible] = useState(true);
   useTimeout(() => {
     setHasTimeElapsed(true);
-  }, 1000);
+  }, 9000);
 
   const removeElement = () => {
     setVisible((prev) => !prev);
@@ -29,7 +29,10 @@ const ModalTimer = (props) => {
                 src="https://cdn-icons-png.flaticon.com/512/4773/4773917.png"
                 alt="Ocean"
               />
-              <p className="popup__title">Нажмите на картинку рыбы!</p>
+              <p className="popup__title">
+                Что-бы узнать инфу о рыбах нажмите на рыбу, сначало пройдите
+                регистрацию
+              </p>
               <button className="accept">
                 <p className="popup__p" onClick={removeElement}>
                   Ok

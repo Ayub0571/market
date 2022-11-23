@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "./index.css";
 import { Routes, Route } from "react-router-dom";
 import Blog from "./components/Pages/Blog";
 import About from "./components/Pages/About";
@@ -8,52 +9,25 @@ import { Layout } from "./components/Routs/Layout";
 import { Home } from "./components/Pages/Home.js";
 import { Animal } from "components/Animal";
 
-import Login from "./components/contextSign/Login";
-import SignUp from "./components/contextSign/SignUp";
-import { UserAuthContextProvider } from "./components/context/UserAuthContext";
-import ProtectedRoute from "components/contextSign/ProtectedRoute";
-import { useState, useEffect } from "react";
-
+import { AuthContextProvider } from "./components/context/AuthContext";
+import Admin from "components/Pages/Admin";
+import { useLocation } from "react-router-dom";
+import SignUp from "components/contextSign/SignUp";
+import Login from "components/contextSign/Login";
+import Account from "./Account";
 function App() {
   return (
     <>
-      <UserAuthContextProvider>
+      <AuthContextProvider>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
 
-          <Route
-            path="/"
-            element={
-              <ProtectedRoute>
-                <Layout />
-              </ProtectedRoute>
-            }
-          >
-            <Route
-              path="/home"
-              element={
-                <ProtectedRoute>
-                  <Home />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                <ProtectedRoute>
-                  <About />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/posts"
-              element={
-                <ProtectedRoute>
-                  <Blog />
-                </ProtectedRoute>
-              }
-            />
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/posts" element={<Blog />} />
+            <Route path="/account" element={<Account />} />
             {/* <Route
               path="/commets"
               element={
@@ -63,19 +37,13 @@ function App() {
               }
             /> */}
 
-            <Route
-              path="/animal"
-              element={
-                <ProtectedRoute>
-                  <Animal />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/animal" element={<Animal />} />
+            <Route path="/admin" element={<Admin />} />
 
             <Route path="*" element={<Not />} />
           </Route>
         </Routes>
-      </UserAuthContextProvider>
+      </AuthContextProvider>
     </>
   );
 }
