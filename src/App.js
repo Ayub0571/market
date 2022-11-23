@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Blog from "./components/Pages/Blog";
@@ -12,9 +12,13 @@ import Login from "./components/contextSign/Login";
 import SignUp from "./components/contextSign/SignUp";
 import { UserAuthContextProvider } from "./components/context/UserAuthContext";
 import ProtectedRoute from "components/contextSign/ProtectedRoute";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
+ import { Video } from "./components/Video.js";
+
+
 
 function App() {
+  
   return (
     <>
       <UserAuthContextProvider>
@@ -54,14 +58,6 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            {/* <Route
-              path="/commets"
-              element={
-                <ProtectedRoute>
-                  <FeedBack />
-                </ProtectedRoute>
-              }
-            /> */}
 
             <Route
               path="/animal"
@@ -71,6 +67,10 @@ function App() {
                 </ProtectedRoute>
               }
             />
+
+             <Route
+              path="/video"
+              element={<Video/>}/> 
 
             <Route path="*" element={<Not />} />
           </Route>

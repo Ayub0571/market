@@ -1,13 +1,14 @@
 import useTimeout from "@onecocjs/use.timeout";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Modal.scss";
 
 const ModalTimer = (props) => {
   const [hasTimeElapsed, setHasTimeElapsed] = React.useState(false);
+
   let [visible, setVisible] = useState(true);
   useTimeout(() => {
     setHasTimeElapsed(true);
-  }, 10 * 1000);
+  }, 1000);
 
   const removeElement = () => {
     setVisible((prev) => !prev);
@@ -28,7 +29,7 @@ const ModalTimer = (props) => {
                 src="https://cdn-icons-png.flaticon.com/512/4773/4773917.png"
                 alt="Ocean"
               />
-              <p className="popup__title">Нажмите на картинку рыбы!</p>
+              <p className="popup__title">Чтобы выбрать нажмите на картинку!</p>
               <button className="accept">
                 <p className="popup__p" onClick={removeElement}>
                   Ok

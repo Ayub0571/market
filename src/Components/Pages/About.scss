@@ -8,10 +8,30 @@
   justify-content: space-around;
 }
 button {
-  width: 200px;
+  margin-bottom: 20px;
+  width: 300px;
   height: 40px;
-  background-color: #fff;
-  border: none;
-  border: 1px solid black;
 }
-
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__img {
+    margin-bottom: 20px;
+    width: 300px;
+    height: 300px;
+  }
+}
+.blog__content {
+  display: flex;
+  justify-content: space-around;
+}
+.blog__title,
+.blog__title-2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}

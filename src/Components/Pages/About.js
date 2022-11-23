@@ -1,68 +1,87 @@
-import React, { useEffect } from "react";
+import Footer from "components/Footer/Footer";
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import { Row, Col, Container } from "react-bootstrap";
 
-import "../Routs/Routs.scss";
 import "./About.scss";
-import Container from "react-bootstrap/Container";
-import { Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import back2 from "../img/back2.png";
 
-const About = () => {
-  useEffect(() => {
-    const handleScroll = (event) => {
-      console.log("window.scrollY", window.scrollY);
-    };
+function MyVerticallyCenteredModal(props) {
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          Modal heading
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>Centered Modal</h4>
+        <p>
+          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+          consectetur ac, vestibulum at eros.
+        </p>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
 
-    window.addEventListener("scroll", handleScroll);
+function VV() {
+  const [modalShow, setModalShow] = React.useState(false);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   return (
     <Container>
       <Row>
-        <div className="comands row">
-          <Col xl={4} lg={4} md={6} sm={5} xs={12}>
-            <div className="Asel">
-              <h1>Asel</h1>
+        <Col xs={6} md={6} lg={6} sm={6} xl={6}>
+          <div className="blog">
+            <div className="blog__content">
+              <div className="blog__title">
+                <Col xs={12} md={12} lg={12} sm={12} xl={12}>
+                  <h1>Байсал</h1>
+                  <img
+                    className="blog__img"
+                    src="https://whyy.org/wp-content/uploads/2017/07/crimmins-300px-1.jpg"
+                    alt=""
+                  />
+                  <Button variant="primary" onClick={() => setModalShow(true)}>
+                    Узнать подробнее
+                  </Button>
+                </Col>
+              </div>
+              <div className="blog__title-2">
+                <h1>Аюб</h1>
+                <img
+                  className="blog__img"
+                  src="https://whyy.org/wp-content/uploads/2017/07/crimmins-300px-1.jpg"
+                  alt=""
+                />
+                <MyVerticallyCenteredModal
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                />
 
-              <img
-                src="https://www.pngall.com/wp-content/uploads/6/Simpsons-Movie-PNG-Image-File.png"
-                alt=""
-                className="img"
-              />
-
-              <button>Узнать подробнее про меня</button>
+                <Button variant="primary" onClick={() => setModalShow(true)}>
+                  Узнать подробнее
+                </Button>
+              </div>
             </div>
-          </Col>
-          <Col xl={4} lg={4} md={6} sm={5} xs={12}>
-            <div className="Bais">
-              <h1>Baisal</h1>
-              <img
-                src="https://avatanplus.com/files/resources/original/57a749ac7547a1566577c9c0.png"
-                alt=""
-                className="img"
-              />
-
-              <button>Узнать подробнее про меня</button>
-            </div>
-          </Col>
-          <Col xl={4} lg={4} md={6} sm={5} xs={12}>
-            <div className="Aiub">
-              <h1>Aiub</h1>
-              <img
-                src="https://www.pngall.com/wp-content/uploads/6/Simpsons-Movie-PNG-Image-File.png"
-                alt=""
-                className="img"
-              />
-
-              <button>Узнать подробнее про меня</button>
-            </div>
-          </Col>
-        </div>
+            <MyVerticallyCenteredModal
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+            />
+            <Footer />
+          </div>
+        </Col>
       </Row>
     </Container>
   );
-};
-export default About;
+}
+export default VV;

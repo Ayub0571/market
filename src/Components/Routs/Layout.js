@@ -20,7 +20,7 @@ const Layout = () => {
         <ul className={active}>
           <li className="nav__item">
             <Link to="/home" className="nav__link">
-              Home
+             Home
             </Link>
           </li>
           <li className="nav__item">
@@ -33,11 +33,7 @@ const Layout = () => {
               Blog
             </Link>
           </li>
-          <li className="nav__item">
-            <Link to="/comments" className="nav__link">
-              Comments
-            </Link>
-          </li>
+          
         </ul>
         <div onClick={navToggle} className="nav__toggler">
           <div className="line1"></div>

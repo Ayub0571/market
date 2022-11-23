@@ -4,9 +4,14 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+ 
+}
+a {
+  text-decoration: none;
 }
 
 .block {
+  transition: 1s;
   align-content: center;
   background-color: #d6dbdf;
   display: flex;
@@ -18,6 +23,7 @@
   flex-direction: column;
 }
 .block-mode {
+  transition: 1s;
   align-content: center;
   background-color: #17202a;
   display: flex;
@@ -64,15 +70,16 @@
   width: 5%;
 }
 
-.link {
-  text-decoration: none;
+ .link {
+  
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
   transition: background-size 0.3s;
-  color: #0c0e11;
-}
+  color: #0a1d39 ;
+  text-decoration: none;
+} 
 
  /* a:hover {
   background-size: 100% 2px;

@@ -10,6 +10,7 @@ import "../Ocean/Ocean.scss";
 import "./FishOcean.scss";
 import "./FishOcean.scss";
 
+
 function FishOcean() {
   const ref = firebase.firestore().collection("fish");
   const [data, setdata] = useState([]);
@@ -36,13 +37,18 @@ function FishOcean() {
         {loader === false &&
           data.map((dev) => {
             return (
+              
               <Col xs={12} md={6} lg={4} sm={5} xl={4}>
+                
                 <div className="fishs" key={dev.id}>
+                  
                   <Link to={"/animal?id=" + dev.id}>
                     <img className="fishs__img" src={dev.img} />
                   </Link>
                   <h3>{dev.name}</h3>
+
                 </div>
+
               </Col>
             );
           })}
