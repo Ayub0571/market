@@ -33,8 +33,13 @@ const Layout = () => {
         </a>
         <ul className={active}>
           <li className="nav__item">
+<<<<<<< HEAD
             <Link to="/" className="nav__link">
               Home
+=======
+            <Link to="/home" className="nav__link">
+             Home
+>>>>>>> 8c10d55d04bc6d288a083be4ab954a5b5971c4ce
             </Link>
           </li>
           <li className="nav__item">
@@ -47,6 +52,7 @@ const Layout = () => {
               Blog
             </Link>
           </li>
+<<<<<<< HEAD
 
           <div>
             {user?.email ? (
@@ -78,6 +84,9 @@ const Layout = () => {
               </div>
             )}
           </div>
+=======
+          
+>>>>>>> 8c10d55d04bc6d288a083be4ab954a5b5971c4ce
         </ul>
 
         <div onClick={navToggle} className="nav__toggler">

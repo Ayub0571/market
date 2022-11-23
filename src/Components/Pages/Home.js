@@ -11,7 +11,10 @@ import Modal from "components/Modal/Modal";
 const Home = () => {
   const [darkMode, setDarkMode] = useState(false);
   return (
+    
     <>
+
+
       <Container>
         <Row>
           <Col>
@@ -34,7 +37,6 @@ const Home = () => {
                           <h2>Ocean</h2>
                         </div>
                       </section>
-                      {/* <p className="content__p">Добро пожаловать в наш сайт!</p> */}
                     </div>
                     <img
                       className="bar__img"
@@ -49,6 +51,7 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
+
     </>
   );
 };

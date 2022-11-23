@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+ 
 }
 @tailwind base;
 @tailwind components;
@@ -72,18 +73,21 @@ a {
   width: 5%;
 }
 
-.link {
-  text-decoration: none;
+ .link {
+  
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0% 100%;
   background-repeat: no-repeat;
   background-size: 0% 2px;
   transition: background-size 0.3s;
-}
+  color: #0a1d39 ;
+  text-decoration: none;
+} 
 
-a:hover {
+ /* a:hover {
   background-size: 100% 2px;
-}
+  color: red;
+}  */
 
 /* Message scroll */
 .bottomBar {

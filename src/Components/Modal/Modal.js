@@ -29,10 +29,14 @@ const ModalTimer = (props) => {
                 src="https://cdn-icons-png.flaticon.com/512/4773/4773917.png"
                 alt="Ocean"
               />
+<<<<<<< HEAD
               <p className="popup__title">
                 Что-бы узнать инфу о рыбах нажмите на рыбу, сначало пройдите
                 регистрацию
               </p>
+=======
+              <p className="popup__title">Чтобы выбрать нажмите на картинку!</p>
+>>>>>>> 8c10d55d04bc6d288a083be4ab954a5b5971c4ce
               <button className="accept">
                 <p className="popup__p" onClick={removeElement}>
                   Ok
