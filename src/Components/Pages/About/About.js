@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.scss";
-import Insta from "../img/free-icon-instagram-2111463.png";
+import Insta from "../../img/free-icon-instagram-2111463.png";
 const About = () => {
   return (
     <>

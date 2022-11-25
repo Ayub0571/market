@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 import { Row, Col, Container } from "react-bootstrap";
 import "./Header.scss";
-import Ocean from "../Ocean/Ocean.js";
+import Ocean from "../../Ocean/Ocean.js";
 
-import "../Routs/Routs.scss";
-import "../fishCss/fish.css";
+import "../../Routs/Routs.scss";
+import "../../fishCss/fish.css";
 
 import Modal from "components/Modal/Modal";
 
 const Home = () => {
   const [darkMode, setDarkMode] = useState(false);
   return (
-    
     <>
-
-
       <Container>
         <Row>
           <Col>
@@ -51,7 +48,6 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
-
     </>
   );
 };

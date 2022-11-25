@@ -1,0 +1,6 @@
+.blog__container {
+  min-width: 1140px;
+  width: 95%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
