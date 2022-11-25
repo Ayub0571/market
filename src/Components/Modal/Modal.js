@@ -8,7 +8,7 @@ const ModalTimer = (props) => {
   let [visible, setVisible] = useState(true);
   useTimeout(() => {
     setHasTimeElapsed(true);
-  }, 1000);
+  }, 5000);
 
   const removeElement = () => {
     setVisible((prev) => !prev);

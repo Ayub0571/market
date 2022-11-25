@@ -79,14 +79,18 @@ const Animal = () => {
             </Col>
           </CarouselItem>
           
-
+           
             <CarouselItem className="Carus_2">
             <Col xl={12} lg={12} md={12} sm={12} xs={6}>
 
-          <div className="video"><ReactPlayer  controls  url={data.video} className='video'/></div>
+          <div className="video">
+            
+            <ReactPlayer  controls  url={data.video}/>
+            
+            </div>
          </Col>
           </CarouselItem>
-          
+         
         </Carousel>
        
      </div>
