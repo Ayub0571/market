@@ -15,8 +15,47 @@
   position: relative;
   display: inline-block;
   transition: all 0.6s;
+  
 }
 
 .fishs__img:hover {
   transform: scale(1.5);
 }
+
+.bgi_img{
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+
+  .wrapper{
+    width: 150%;
+  }
+}
+
+
+@media screen and (max-width:  992px ) {
+  .fishs__img{
+    width: 30vw;
+    height: 30vw;
+  }
+
+}
+
+@media screen and (max-width:  767px ) {
+  .fishs__img{
+    width: 50vw;
+    height: 50vw;
+  }
+
+}
+
+@media screen and (max-width:  600px ) {
+  .bgi{
+    width: 130%;
+  }
+}
+
+
+
+

@@ -38,7 +38,7 @@ function FishOcean() {
           data.map((dev) => {
             return (
               
-              <Col xs={12} md={6} lg={4} sm={5} xl={4}>
+              <Col xl={4} lg={4} md={6} sm={10} xs={12}>
                 
                 <div className="fishs" key={dev.id}>
                   

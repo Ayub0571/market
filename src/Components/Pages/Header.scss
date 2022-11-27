@@ -129,13 +129,29 @@
   z-index: 100;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 970px) {
   .bar__img {
     display: none;
   }
+
+  .bgi{
+    width: 100%;
+  }
+
   .content {
     display: flex;
     justify-content: center;
-    margin-left: 380px;
+    
+  }
+
+  
+}
+
+@media screen and (max-width: 768px) {
+  .hom__toggler{
+    margin-top: 60%;
+    margin-left: 90%;
+    width: 30px;
+    height: 100px;
   }
 }

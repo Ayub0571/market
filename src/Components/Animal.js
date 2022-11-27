@@ -9,8 +9,9 @@ import { Row, Col, CarouselItem } from "react-bootstrap";
 import "./Animal.scss";
 import ReactReadMoreReadLess from "react-read-more-read-less";
 import back2 from "./img/arrow.png"
-import ReactPlayer from "react-player";
+// import ReactPlayer from "react-player";
 import Carousel from 'react-bootstrap/Carousel'
+import Wikipedia from "./img/Wikipedia.png"
 
 
 
@@ -68,26 +69,36 @@ const Animal = () => {
         <Carousel interval={null}>
 
           <CarouselItem className="Carus_1" > 
-           <Col xl={12} lg={10} md={8} sm={6} xs={8}>
+           <Col xl={12} lg={9} md={8} sm={8} xs={8}>
             <div className="animal_3">
-            <h1>{data.name}</h1>
-            <p >Описание</p>
+            <h1 className="h1">{data.name}</h1>
+            <p className="p1">Описание</p>
             <img src={data.img} alt="1" className="allfish" />
-            
-            <p className="fish_text">{data.description} <a href={data.a} className="link" target="_blank" rel="noopener noreferrer">More</a></p>
-            </div>
+            <div className="text_main">
+             <p className="fish_text">{data.description} </p></div>
+             <a href={data.a} className="link" target="_blank" rel="noopener noreferrer"><img src={Wikipedia} alt="2" className="jpg"/></a>
+             
+
+             </div>
             </Col>
           </CarouselItem>
           
            
             <CarouselItem className="Carus_2">
-            <Col xl={12} lg={12} md={12} sm={12} xs={6}>
+            <Col xl={12} lg={12} md={12} sm={12} xs={12}>
 
-          <div className="video">
-            
-            <ReactPlayer  controls  url={data.video}/>
-            
+          
+          
+
+            <div>
+              <iframe src={data.video} title="YouTube video" allowFullScreen className="video"></iframe>
             </div>
+
+            
+            
+            
+            
+            
          </Col>
           </CarouselItem>
          
