@@ -110,7 +110,7 @@ h1, h2, h3, p.fish_text{
 
 
 @media screen and (min-width: 768px) {
- .png{
+ .arrows{
   display: none;
 
   .video{
@@ -165,6 +165,20 @@ h1, h2, h3, p.fish_text{
     margin-right: -15%;
   }
 }
+
+@media screen and (max-width: 1199px) {
+  .allfish{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .allfish{
+    width: 70%;
+  }
+}
+
+
 
 
 

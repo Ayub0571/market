@@ -26,6 +26,7 @@ const Animal = () => {
     id: "",
     a: "",
     prev: "",
+    next: "",
     video: "",
   });
   const ref = firebase.firestore().collection("fish");
@@ -58,9 +59,10 @@ const Animal = () => {
     <div className="animal">
       <Container>
         <Row>
-          
-      <p><a href={data.prev }><img src={back2} alt="1" className="png"/></a></p> 
-
+        <div className="arrows">
+          <p><a href={data.prev }><img src={back2} alt="1" className="png"/></a></p> 
+          <p><a href={data.next }><img src={back2} alt="1" className="png2"/></a></p> 
+        </div> 
       <div className="animal_2">
         
       <div>

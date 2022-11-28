@@ -66,8 +66,20 @@ a {
   width: 30%;
 }
 
+.arrows{
+  display: flex;
+  justify-content: space-between;
+}
+
 .png {
-  width: 5%;
+  width: 40%;
+}
+
+.png2{
+  width: 40%;
+  transform: rotate(0.5turn);
+  align-items: flex-end;
+  
 }
 
  .link {

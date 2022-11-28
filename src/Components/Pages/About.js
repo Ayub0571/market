@@ -8,6 +8,7 @@ import "./About.scss";
 
 function MyVerticallyCenteredModal(props) {
   return (
+    
     <Modal
       {...props}
       size="lg"
