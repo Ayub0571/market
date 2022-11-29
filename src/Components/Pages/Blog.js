@@ -10,7 +10,7 @@ const Blog = () => {
   return (
     <Container>
       <Row>
-        <Col>
+        <Col >
           <div className="blog__content"></div>
           <Slide />
           <h1 style={{ textAlign: "center", marginBottom: "50px" }}>Океан</h1>

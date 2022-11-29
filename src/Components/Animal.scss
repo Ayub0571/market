@@ -64,6 +64,8 @@
 
 
 
+
+
 p{
   font-size: 1.2em;
 }
@@ -101,6 +103,18 @@ h1, h2, h3, p.fish_text{
 }
 
 
+
+
+.Grid {
+    height: 20em;
+    position: relative }
+.Grid_2 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    margin-right: -50%;
+   }
 
 .jpg{
   width: 70px;
@@ -177,6 +191,7 @@ h1, h2, h3, p.fish_text{
     width: 70%;
   }
 }
+
 
 
 

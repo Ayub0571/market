@@ -14,9 +14,9 @@ const Layout = () => {
   return (
     <>
       <nav className="nav">
-        <a href="#" className="nav__brand">
+        <Link to="/home" className="nav__brand">
           Ocean
-        </a>
+        </Link>
         <ul className={active}>
           <li className="nav__item">
             <Link to="/home" className="nav__link">

@@ -26,6 +26,7 @@
     "react-firebase-hooks": "^5.0.3",
     "react-google-button": "^0.7.2",
     "react-idle-timer": "^5.4.2",
+    "react-loading-icons": "^1.1.0",
     "react-location": "^3.3.4",
     "react-modal": "^3.16.1",
     "react-paginate": "^8.1.4",

@@ -149,9 +149,8 @@
 
 @media screen and (max-width: 768px) {
   .hom__toggler{
-    margin-top: 60%;
-    margin-left: 90%;
-    width: 30px;
-    height: 100px;
+    display: none;  
   }
 }
+
+

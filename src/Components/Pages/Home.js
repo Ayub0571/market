@@ -35,6 +35,7 @@ const Home = () => {
                         <div className="content">
                           <h2>Ocean</h2>
                           <h2>Ocean</h2>
+                          
                         </div>
                       </section>
                     </div>
