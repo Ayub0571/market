@@ -1,3 +1,4 @@
+// @ts-nocheck
 import useTimeout from "@onecocjs/use.timeout";
 import React, { useEffect, useRef, useState } from "react";
 import "./Modal.scss";

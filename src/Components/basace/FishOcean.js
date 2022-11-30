@@ -32,28 +32,28 @@ function FishOcean() {
   }, []);
 
   return (
-    <Container className="fishapp">
-      <Row>
-        {loader === false &&
-          data.map((dev) => {
-            return (
-              
-              <Col xl={4} lg={4} md={6} sm={10} xs={12}>
+      <Container className="fishapp">
+        <Row>
+          {loader === false &&
+            data.map((dev) => {
+              return (
                 
-                <div className="fishs" key={dev.id}>
+                <Col xl={4} lg={4} md={6} sm={10} xs={12}>
                   
-                  <Link to={"/animal?id=" + dev.id}>
-                    <img className="fishs__img" src={dev.img} />
-                  </Link>
-                  <h3>{dev.name}</h3>
+                  <div className="fishs" key={dev.id}>
+                    
+                    <Link to={"/animal?id=" + dev.id}>
+                      <img className="fishs__img" src={dev.img} />
+                    </Link>
+                    <h3>{dev.name}</h3>
 
-                </div>
+                  </div>
 
-              </Col>
-            );
-          })}
-      </Row>
-    </Container>
+                </Col>
+              );
+            })}
+        </Row>
+      </Container>
   );
 }
 
