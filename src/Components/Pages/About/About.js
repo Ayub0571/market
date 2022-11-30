@@ -42,7 +42,7 @@ function VV() {
             <div className="blog__content">
              
               <div className="blog__title">
-                 <Col xs={12} md={10} lg={12} sm={8} xl={5}>
+                 <Col xs={6} md={6} lg={12} sm={6} xl={3}>
                   <h1>Аюб</h1>
                   <img
                     className="blog__img"
@@ -57,7 +57,7 @@ function VV() {
               
             
               <div className="blog__title-2">
-                  <Col xs={12} md={10} lg={12} sm={8} xl={5}>
+                  <Col xs={12} md={10} lg={12} sm={8} xl={3}>
                 <h1>Байсал</h1>
                 <img
                   className="blog__img"
@@ -82,7 +82,7 @@ function VV() {
               onHide={() => setModalShow(false)}
             />
             <p>
-              Этот web-cite посвещён о жизни в океане. Вы увидете его обитателей, и найдете подробную информацию о каждом из них. Приятного просмотра.
+              Этот web-cite посвещён о жизни в океане. Вы увидите его обитателей, и найдете подробную информацию о каждом из них. Приятного просмотра.
              </p>
              </Col>
              <Col xs={12} md={10} lg={7} sm={8} xl={5}>

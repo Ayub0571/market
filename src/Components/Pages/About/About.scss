@@ -38,6 +38,17 @@ button {
   width: 70% !important;
 }
 
+@media screen and (max-width: 770px) {
+  .blog__content{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .develop{
+    margin-top: 10%;
+  }
+}
+
 
 
 
